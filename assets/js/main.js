@@ -121,16 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ── 6. FORMULARIO DE CONTACTO ── */
+  /* ── 6. FORMULARIO DE CONTACTO (Web3Forms) ── */
   const form     = document.getElementById('contactForm');
   const formNote = document.getElementById('formNote');
 
+  const W3F_KEY = '611327eb-a28d-4e98-966a-0ce08265a623';
+
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const name    = document.getElementById('name').value.trim();
       const email   = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
       const message = document.getElementById('message').value.trim();
 
       if (!name || !email || !message) {
@@ -145,19 +148,39 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simulación de envío (integrar con backend o Formspree)
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
       btn.querySelector('span').textContent = 'Enviando…';
 
-      setTimeout(() => {
-        formNote.style.color = '#00e676';
-        formNote.textContent = '✅ ¡Mensaje enviado! Te contactaré pronto.';
-        form.reset();
+      try {
+        const res  = await fetch('https://api.web3forms.com/submit', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body:    JSON.stringify({
+            access_key: W3F_KEY,
+            name,
+            email,
+            subject: subject || 'Contacto desde portafolio',
+            message
+          })
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          formNote.style.color = '#00e676';
+          formNote.textContent = '✅ ¡Mensaje enviado! Te contactaré pronto.';
+          form.reset();
+          setTimeout(() => { formNote.textContent = ''; }, 5000);
+        } else {
+          throw new Error(data.message || 'Error al enviar');
+        }
+      } catch {
+        formNote.style.color = '#ff6b6b';
+        formNote.textContent = '❌ No se pudo enviar. Escríbeme directo a fernando.quesadam@gmail.com';
+      } finally {
         btn.disabled = false;
         btn.querySelector('span').textContent = 'Enviar mensaje';
-        setTimeout(() => { formNote.textContent = ''; }, 5000);
-      }, 1500);
+      }
     });
   }
 
