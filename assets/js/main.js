@@ -137,13 +137,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = document.getElementById('message').value.trim();
 
       if (!name || !email || !message) {
-        formNote.style.color = '#ff6b6b';
+        formNote.style.color = '#c17a6f';
         formNote.textContent = 'Por favor completa los campos obligatorios.';
         return;
       }
 
       if (!isValidEmail(email)) {
-        formNote.style.color = '#ff6b6b';
+        formNote.style.color = '#c17a6f';
         formNote.textContent = 'Por favor ingresa un email válido.';
         return;
       }
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await res.json();
 
         if (data.success) {
-          formNote.style.color = '#00e676';
+          formNote.style.color = '#8fb797';
           formNote.textContent = '✅ ¡Mensaje enviado! Te contactaré pronto.';
           form.reset();
           setTimeout(() => { formNote.textContent = ''; }, 5000);
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
           throw new Error(data.message || 'Error al enviar');
         }
       } catch {
-        formNote.style.color = '#ff6b6b';
+        formNote.style.color = '#c17a6f';
         formNote.textContent = '❌ No se pudo enviar. Escríbeme directo a fernando.quesadam@gmail.com';
       } finally {
         btn.disabled = false;
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
       border-radius: 50%;
       pointer-events: none;
       z-index: 0;
-      background: radial-gradient(circle, rgba(0,212,255,0.04) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(201,163,92,0.05) 0%, transparent 70%);
       transform: translate(-50%, -50%);
       transition: left 0.3s ease, top 0.3s ease;
     `;
