@@ -1,868 +1,487 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fernando Quesada Mora — Portafolio</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Fernando Quesada Mora — Desarrollador de software</title>
+    <meta name="description"
+        content="Fernando Quesada Mora: más de 18 años en desarrollo de software y líder de mantenimiento de software. Sitios web y sistemas a la medida para negocios en Costa Rica." />
+    <meta name="theme-color" content="#f4f1ea" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fernando Quesada Mora — Desarrollador de software" />
+    <meta property="og:description"
+        content="Software confiable y sitios web claros para negocios en Costa Rica. Proyectos, trayectoria y contacto." />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232340ff'/%3E%3Ctext x='32' y='41' font-family='Arial,sans-serif' font-size='26' font-weight='800' text-anchor='middle' fill='white'%3EFQ%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-    <!-- ── NAVBAR ── -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-brand">
-            <span class="brand-bracket">&lt;</span>FQM<span class="brand-bracket">/&gt;</span>
-        </div>
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links" id="navLinks">
-            <li>
-                <a href="#inicio" class="nav-link" data-section="inicio">Inicio</a>
-            </li>
-            <li>
-                <a href="#sobre-mi" class="nav-link" data-section="sobre-mi">Sobre mí</a>
-            </li>
-            <li>
-                <a href="#habilidades" class="nav-link" data-section="habilidades">Habilidades</a>
-            </li>
-            <li>
-                <a href="#proyectos" class="nav-link" data-section="proyectos">Proyectos</a>
-            </li>
-            <li>
-                <a href="#contacto" class="nav-link" data-section="contacto">Contacto</a>
-            </li>
-        </ul>
-    </nav>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
 
-    <!-- ═══════════════ SECCIÓN 1 — INICIO / HERO ═══════════════ -->
-    <section class="hero" id="inicio">
-        <!-- Parallax background (global, fixed) -->
-        <div class="parallax-bg" id="parallaxBg">
-            <div class="parallax-img" id="parallaxImg"></div>
-            <div class="parallax-grid"></div>
-            <div class="parallax-vignette"></div>
-            <div class="parallax-glow" id="parallaxGlow"></div>
+    <!-- ── NAVEGACIÓN ── -->
+    <header class="nav" id="nav">
+        <div class="wrap nav-inner">
+            <a href="#inicio" class="brand" aria-label="Fernando Quesada Mora, inicio">
+                <span class="brand-mark">FQ</span>
+                <span>Fernando Quesada</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"
+                aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#sobre-mi" data-section="sobre-mi">Sobre mí</a></li>
+                    <li><a href="#proyectos" data-section="proyectos">Proyectos</a></li>
+                    <li><a href="#habilidades" data-section="habilidades">Habilidades</a></li>
+                    <li><a href="#contacto" data-section="contacto" class="nav-cta">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="hero-content">
-            <p class="hero-eyebrow">Hola, soy</p>
-            <h1 class="hero-name">
-                Fernando<br /><span class="accent">Quesada Mora</span>
-            </h1>
-            <p class="hero-roles">
-                <span class="role-tag">Analista de Sistemas</span>
-                <span class="role-sep">·</span>
-                <span class="role-tag">Desarrollador de Software</span>
-                <span class="role-sep">·</span>
-                <span class="role-tag">Líder TIC</span>
-            </p>
-            <p class="hero-sub">
-                +18 años construyendo soluciones tecnológicas en Costa Rica.<br />
-                Actualmente liderando el departamento de mantenimiento de software en
-                NCQ.
-            </p>
-            <div class="hero-cta">
-                <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-                <a href="#contacto" class="btn btn-outline">Contáctame</a>
-            </div>
-        </div>
-        <div class="hero-code-card">
-            <div class="code-header">
-                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                <span class="code-filename">perfil.json</span>
-            </div>
-            <pre class="code-body"><code>{
-  <span class="ck">"nombre"</span>: <span class="cv">"Fernando Quesada"</span>,
-  <span class="ck">"rol"</span>: <span class="cv">"Líder de Software"</span>,
-  <span class="ck">"empresa"</span>: <span class="cv">"NCQ"</span>,
-  <span class="ck">"experiencia"</span>: <span class="cn">18</span>,
-  <span class="ck">"ubicacion"</span>: <span class="cv">"Pérez Zeledón, CR"</span>,
-}</code></pre>
-        </div>
-        <div class="scroll-hint">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
+    </header>
 
-    <!-- ═══════════════ SECCIÓN 2 — SOBRE MÍ ═══════════════ -->
-    <section class="section" id="sobre-mi">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">01</span>
-                <h2 class="section-title">Sobre mí</h2>
-                <div class="section-line"></div>
-            </div>
+    <main id="contenido">
 
-            <div class="about-grid">
-                <div class="about-photo-wrap">
-                    <div class="about-photo-frame">
-                        <img src="assets/img/profile.jpg" alt="Fernando Quesada Mora" class="about-photo" onerror="
-                  this.style.display = 'none';
-                  this.nextElementSibling.style.display = 'flex';
-                " />
-                        <div class="about-photo-placeholder">
-                            <span>FQM</span>
+        <!-- ═══════════════ INICIO ═══════════════ -->
+        <section class="hero" id="inicio">
+            <div class="wrap">
+                <div class="hero-grid">
+                    <div>
+                        <p class="eyebrow">Fernando Quesada Mora · Pérez Zeledón, Costa Rica</p>
+                        <h1>Software confiable y sitios web <span class="hl">claros</span> para negocios reales.</h1>
+                        <p class="hero-sub">
+                            Más de 18 años desarrollando y manteniendo sistemas. Hoy lidero un departamento de
+                            mantenimiento de software y diseño sitios web a la medida para negocios.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#proyectos" class="btn btn-solid">Ver proyectos <span class="arr">↗</span></a>
+                            <a href="#contacto" class="btn btn-line">Escríbeme</a>
                         </div>
-                    </div>
-                    <div class="about-badge">
-                        <span class="badge-years">18+</span>
-                        <span class="badge-label">años de<br />experiencia</span>
                     </div>
                 </div>
 
-                <div class="about-text">
-                    <p class="about-lead">
-                        Soy un profesional en sistemas con más de 18 años de trayectoria
-                        en desarrollo de software, soporte técnico y gestión de proyectos
-                        tecnológicos en Costa Rica.
-                    </p>
-                    <p>
-                        Actualmente me desempeño como
-                        <strong>Líder del Departamento de Mantenimiento de Software en
-                            NCQ</strong>, cargo que ocupo desde hace 6 años, donde además capacito e
-                        induzco a los nuevos desarrolladores del equipo.
-                    </p>
-                    <p>
-                        Me apasiona la comunicación efectiva, el trabajo en equipo y la
-                        mejora continua. He trabajado en instituciones como
-                        <strong>ASECCSS</strong>, <strong>Club Los Jaúles</strong> ,
-                        <strong>Coopealianza R.L.</strong> ,
-                        <strong>Banco Promerica</strong> y <strong>NCQ Technology</strong>, adquiriendo experiencia tanto en
-                        desarrollo de software como en infraestructura de redes y soporte
-                        TIC.
-                    </p>
+                <div class="facts">
+                    <div class="fact">
+                        <b>18+</b>
+                        <span>años en desarrollo de software, soporte técnico y gestión de proyectos TIC.</span>
+                    </div>
+                    <div class="fact">
+                        <b>2020</b>
+                        <span>desde entonces lidero un equipo de mantenimiento de software y la inducción de nuevos desarrolladores.</span>
+                    </div>
+                    <div class="fact">
+                        <b>CR</b>
+                        <span>En persona en Pérez Zeledón. En el resto del país, por videollamada.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="about-info-grid">
-                        <div class="info-item">
-                            <span class="info-icon">📍</span>
-                            <div>
-                                <span class="info-label">Ubicación</span>
-                                <span class="info-value">Pérez Zeledón, San José, CR</span>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">📞</span>
-                            <div>
-                                <span class="info-label">Teléfono</span>
-                                <span class="info-value">8564-9198</span>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">✉️</span>
-                            <div>
-                                <span class="info-label">Email</span>
-                                <span class="info-value">fernando.quesadam@gmail.com</span>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">🏢</span>
-                            <div>
-                                <span class="info-label">Empresa actual</span>
-                                <span class="info-value">NCQ (6 años)</span>
-                            </div>
-                        </div>
+        <!-- ═══════════════ SOBRE MÍ ═══════════════ -->
+        <section class="section alt" id="sobre-mi">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="num">01</span>
+                    <h2>Sobre mí</h2>
+                </div>
+
+                <div class="about">
+                    <div class="portrait reveal" id="portrait">
+                        <img src="assets/img/profile.jpg" alt="Fernando Quesada Mora" />
                     </div>
 
-                    <div class="about-certs">
-                        <h3 class="certs-title">Certificaciones</h3>
-                        <div class="certs-grid">
-                            <div class="cert-card" data-img="assets/img/cert_android_01.jpeg">
-                                <span class="cert-icon">📱</span>
-                                <div>
+                    <div class="about-body">
+                        <p class="lead reveal">
+                            Profesional en sistemas con más de 18 años de trayectoria en desarrollo de software, soporte
+                            técnico y gestión de proyectos tecnológicos en Costa Rica.
+                        </p>
+                        <p class="reveal">
+                            Actualmente soy <strong>Líder del Departamento de Mantenimiento de Software en NCQ</strong>,
+                            cargo que ocupo desde 2020 y desde el que además capacito e induzco a los nuevos
+                            desarrolladores del equipo.
+                        </p>
+                        <p class="reveal">
+                            Me importan la comunicación clara, el trabajo en equipo y la mejora continua. He pasado por
+                            instituciones y empresas donde adquirí experiencia tanto en desarrollo de software como en
+                            infraestructura de redes y soporte TIC.
+                        </p>
+
+                        <div class="worked reveal">
+                            <span class="eyebrow">He trabajado en</span>
+                            <ul>
+                                <li>NCQ Technology</li>
+                                <li>Banco Promerica</li>
+                                <li>Coopealianza R.L.</li>
+                                <li>Club Los Jaúles</li>
+                                <li>ASECCSS</li>
+                            </ul>
+                        </div>
+
+                        <div class="certs reveal">
+                            <h3>Certificaciones</h3>
+                            <div class="cert-list">
+                                <div class="cert" data-img="assets/img/cert_android_01.jpeg">
                                     <span class="cert-name">Android con Java</span>
-                                    <span class="cert-org">MICITT — CECI · 2021</span>
+                                    <span class="cert-org">MICITT — CECI</span>
+                                    <span class="cert-year">2021</span>
                                 </div>
-                            </div>
-                            <div class="cert-card" data-img="assets/img/cert_javascript.jpeg">
-                                <span class="cert-icon">🟨</span>
-                                <div>
+                                <div class="cert" data-img="assets/img/cert_javascript.jpeg">
                                     <span class="cert-name">JavaScript Essentials 1</span>
-                                    <span class="cert-org">MICITT — LINC · 2023</span>
+                                    <span class="cert-org">MICITT — LINC</span>
+                                    <span class="cert-year">2023</span>
                                 </div>
-                            </div>
-                            <div class="cert-card" data-img="assets/img/cert_sql_01.jpeg">
-                                <span class="cert-icon">🗄️</span>
-                                <div>
+                                <div class="cert" data-img="assets/img/cert_sql_01.jpeg">
                                     <span class="cert-name">SQL</span>
-                                    <span class="cert-org">MICITT — CECI · 2022</span>
+                                    <span class="cert-org">MICITT — CECI</span>
+                                    <span class="cert-year">2022</span>
                                 </div>
-                            </div>
-                            <div class="cert-card">
-                                <span class="cert-icon">🐙</span>
-                                <div>
+                                <div class="cert">
                                     <span class="cert-name">GIT + GitHub</span>
-                                    <span class="cert-org">Udemy · Oct 2024</span>
+                                    <span class="cert-org">Udemy</span>
+                                    <span class="cert-year">Oct 2024</span>
                                 </div>
-                            </div>
-                            <div class="cert-card">
-                                <span class="cert-icon">💻</span>
-                                <div>
+                                <div class="cert">
                                     <span class="cert-name">Programación en C#</span>
-                                    <span class="cert-org">Udemy · Nov 2024</span>
+                                    <span class="cert-org">Udemy</span>
+                                    <span class="cert-year">Nov 2024</span>
                                 </div>
-                            </div>
-                            <div class="cert-card">
-                                <span class="cert-icon">✨</span>
-                                <div>
+                                <div class="cert">
                                     <span class="cert-name">Clean Code</span>
-                                    <span class="cert-org">Udemy · May 2023</span>
+                                    <span class="cert-org">Udemy</span>
+                                    <span class="cert-year">May 2023</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ═══════════════ SECCIÓN 3 — HABILIDADES ═══════════════ -->
-    <section class="section section-alt" id="habilidades">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">02</span>
-                <h2 class="section-title">Habilidades</h2>
-                <div class="section-line"></div>
+        <!-- ═══════════════ PROYECTOS ═══════════════ -->
+        <section class="section" id="proyectos">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="num">02</span>
+                    <h2>Proyectos</h2>
+                    <p>Sitios web para clientes y negocios, y aplicaciones propias. Las demos están en línea para que
+                        las recorras.</p>
+                </div>
+
+                <div class="filters" role="group" aria-label="Filtrar proyectos">
+                    <button class="filter" data-filter="all" aria-pressed="true">Todos</button>
+                    <button class="filter" data-filter="web" aria-pressed="false">Sitios web</button>
+                    <button class="filter" data-filter="app" aria-pressed="false">Aplicaciones</button>
+                </div>
+
+                <div class="projects" id="projects">
+
+                    <!-- MASTKD -->
+                    <article class="project wide reveal" data-cat="web">
+                        <a class="thumb" href="https://mastkd.com" target="_blank" rel="noopener"
+                            aria-label="Abrir MASTKD">
+                            <img src="assets/img/proyectos/mastkd.jpg" alt="Vista del sitio MASTKD" loading="lazy" />
+                        </a>
+                        <div class="p-text">
+                            <div class="p-meta"><span>Sitio web</span><i class="dot"></i><span class="state live">En
+                                    producción</span></div>
+                            <h3>MASTKD</h3>
+                            <p class="client">Cliente · Portal de Taekwondo</p>
+                            <p class="desc">Reactivación y rediseño completo de un sitio inactivo. Diseño, contenido,
+                                plugins y rendimiento general actualizados en WordPress.</p>
+                            <div class="stack"><span>WordPress</span><span>Rediseño</span><span>Optimización</span>
+                            </div>
+                            <a class="p-link" href="https://mastkd.com" target="_blank" rel="noopener">Ver sitio <span
+                                    class="arr">↗</span></a>
+                        </div>
+                    </article>
+
+                    <!-- HOOPZ -->
+                    <article class="project reveal" data-cat="web">
+                        <a class="thumb" href="https://hoopz-demo.web1337.net/wp/?i=2" target="_blank" rel="noopener"
+                            aria-label="Abrir Hoopz Basketball Academy">
+                            <img src="assets/img/proyectos/hoopz.jpg" alt="Vista del sitio Hoopz Basketball Academy"
+                                loading="lazy" />
+                        </a>
+                        <div class="p-meta"><span>Sitio web</span><i class="dot"></i><span class="state">Demo</span>
+                        </div>
+                        <h3>Hoopz Basketball Academy</h3>
+                        <p class="client">Academia de baloncesto</p>
+                        <p class="desc">Academia juvenil con categorías U10 a U16. Tema hijo personalizado, equipos y
+                            resultados con SportsPress, y hero animado con Smart Slider 3.</p>
+                        <div class="stack"><span>WordPress</span><span>Elementor</span><span>SportsPress</span></div>
+                        <a class="p-link" href="https://hoopz-demo.web1337.net/wp/?i=2" target="_blank"
+                            rel="noopener">Ver sitio <span class="arr">↗</span></a>
+                    </article>
+
+                    <!-- REPUESTOS -->
+                    <article class="project reveal" data-cat="web">
+                        <a class="thumb" href="https://repuestos-demo.infy.click/?i=2" target="_blank" rel="noopener"
+                            aria-label="Abrir Repuestos Especiales">
+                            <img src="assets/img/proyectos/repuestos.jpg"
+                                alt="Vista de la tienda Repuestos Especiales" loading="lazy" />
+                        </a>
+                        <div class="p-meta"><span>Tienda en línea</span><i class="dot"></i><span
+                                class="state">Demo</span></div>
+                        <h3>Repuestos Especiales</h3>
+                        <p class="client">Tienda de repuestos para vehículos</p>
+                        <p class="desc">Catálogo con ofertas, carrito, cuenta de cliente y cotización directa por
+                            WhatsApp, pensado para vender repuestos con envíos a todo el país.</p>
+                        <div class="stack"><span>WordPress</span><span>WooCommerce</span><span>WhatsApp</span></div>
+                        <a class="p-link" href="https://repuestos-demo.infy.click/?i=2" target="_blank"
+                            rel="noopener">Ver tienda <span class="arr">↗</span></a>
+                    </article>
+
+                    <!-- HOTEL -->
+                    <article class="project reveal" data-cat="web">
+                        <a class="thumb" href="https://hotel-demo.great-site.net/?i=1" target="_blank" rel="noopener"
+                            aria-label="Abrir Aurora Boutique Hotel">
+                            <img src="assets/img/proyectos/hotel.jpg" alt="Vista del sitio Aurora Boutique Hotel"
+                                loading="lazy" />
+                        </a>
+                        <div class="p-meta"><span>Sitio web · Reservas</span><i class="dot"></i><span
+                                class="state">Demo</span></div>
+                        <h3>Aurora Boutique Hotel</h3>
+                        <p class="client">Hotel boutique frente al mar</p>
+                        <p class="desc">Habitaciones con tarifas por noche, reservas en línea, calendario de
+                            disponibilidad y consulta de reservas para el huésped.</p>
+                        <div class="stack"><span>WordPress</span><span>Reservas en línea</span><span>Diseño a la
+                                medida</span></div>
+                        <a class="p-link" href="https://hotel-demo.great-site.net/?i=1" target="_blank"
+                            rel="noopener">Ver sitio <span class="arr">↗</span></a>
+                    </article>
+
+                    <!-- PLAZA LAUREL -->
+                    <article class="project reveal" data-cat="web">
+                        <a class="thumb" href="https://dalicore.github.io/plazalaurel/" target="_blank" rel="noopener"
+                            aria-label="Abrir Plaza Laurel">
+                            <img src="assets/img/proyectos/plazalaurel.jpg" alt="Vista del sitio Plaza Laurel"
+                                loading="lazy" />
+                        </a>
+                        <div class="p-meta"><span>Sitio web</span><i class="dot"></i><span class="state">Demo</span>
+                        </div>
+                        <h3>Plaza Laurel</h3>
+                        <p class="client">Centro comercial boutique</p>
+                        <p class="desc">Sitio para un centro comercial boutique en Escazú: directorio de locales,
+                            identidad visual elegante y secciones pensadas para transmitir exclusividad.</p>
+                        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <a class="p-link" href="https://dalicore.github.io/plazalaurel/" target="_blank"
+                            rel="noopener">Ver sitio <span class="arr">↗</span></a>
+                    </article>
+
+                    <!-- LA REPOSTERÍA -->
+                    <article class="project reveal" data-cat="web">
+                        <a class="thumb" href="https://dalicore.github.io/LaReposteria/" target="_blank"
+                            rel="noopener" aria-label="Abrir La Repostería">
+                            <img src="assets/img/proyectos/reposteria.jpg" alt="Vista del sitio La Repostería"
+                                loading="lazy" />
+                        </a>
+                        <div class="p-meta"><span>Sitio web</span><i class="dot"></i><span class="state">Demo</span>
+                        </div>
+                        <h3>La Repostería</h3>
+                        <p class="client">Repostería artesanal</p>
+                        <p class="desc">Muestra de productos, galería de creaciones y pedidos directos por WhatsApp.
+                        </p>
+                        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <a class="p-link" href="https://dalicore.github.io/LaReposteria/" target="_blank"
+                            rel="noopener">Ver sitio <span class="arr">↗</span></a>
+                    </article>
+
+                    <!-- NASUA -->
+                    <article class="project reveal" data-cat="web">
+                        <a class="thumb" href="https://nasua-demo.22web.org/wp/" target="_blank" rel="noopener"
+                            aria-label="Abrir Nasua">
+                            <img src="assets/img/proyectos/nasua.jpg" alt="Vista del sitio Nasua" loading="lazy" />
+                        </a>
+                        <div class="p-meta"><span>Sitio web</span><i class="dot"></i><span class="state">Demo</span>
+                        </div>
+                        <h3>Nasua</h3>
+                        <p class="client">Alquileres vacacionales en Uvita</p>
+                        <p class="desc">Sitio en WordPress con Elementor para alquileres vacacionales: propiedades,
+                            administración y reserva directa, con una estructura visual moderna orientada a
+                            conversión.</p>
+                        <div class="stack"><span>WordPress</span><span>Elementor</span><span>Diseño web</span></div>
+                        <a class="p-link" href="https://nasua-demo.22web.org/wp/" target="_blank"
+                            rel="noopener">Ver sitio <span class="arr">↗</span></a>
+                    </article>
+
+                    <!-- CONVERSOR -->
+                    <article class="project reveal" data-cat="app">
+                        <button class="thumb phones" type="button" aria-label="Ver capturas de Conversor de Monedas"
+                            data-gallery="assets/img/convert01.png,assets/img/convert02.png,assets/img/convert03.png"
+                            data-title="Conversor de Monedas">
+                            <img src="assets/img/convert01.png" alt="" loading="lazy" />
+                            <img src="assets/img/convert02.png" alt="" loading="lazy" />
+                            <img src="assets/img/convert03.png" alt="" loading="lazy" />
+                            <span class="count">3 capturas</span>
+                        </button>
+                        <div class="p-meta"><span>Aplicación Android</span><i class="dot"></i><span
+                                class="state live">Disponible</span></div>
+                        <h3>Conversor de Monedas</h3>
+                        <p class="client">Proyecto personal</p>
+                        <p class="desc">Aplicación móvil para viajeros que convierte monedas en tiempo real.</p>
+                        <div class="stack"><span>Android</span></div>
+                    </article>
+
+                    <!-- SPORTACADEMY -->
+                    <article class="project reveal" data-cat="app">
+                        <button class="thumb phones" type="button" aria-label="Ver capturas de SportAcademy"
+                            data-gallery="assets/img/sportacademy01.png,assets/img/sportacademy02.png,assets/img/sportacademy03.png,assets/img/sportacademy04.png"
+                            data-title="SportAcademy">
+                            <img src="assets/img/sportacademy01.png" alt="" loading="lazy" />
+                            <img src="assets/img/sportacademy02.png" alt="" loading="lazy" />
+                            <img src="assets/img/sportacademy03.png" alt="" loading="lazy" />
+                            <span class="count">4 capturas</span>
+                        </button>
+                        <div class="p-meta"><span>Aplicación Android</span><i class="dot"></i><span
+                                class="state live">Disponible</span></div>
+                        <h3>SportAcademy</h3>
+                        <p class="client">Proyecto personal</p>
+                        <p class="desc">Aplicación móvil para el control de alumnos, el registro de pagos y los
+                            proyectos de la academia.</p>
+                        <div class="stack"><span>Android</span><span>Firebase</span></div>
+                    </article>
+
+                </div>
             </div>
+        </section>
 
-            <div class="skills-layout">
-                <div class="skills-group">
-                    <h3 class="skills-group-title">
-                        <span class="skills-group-icon">⚙️</span> Lenguajes &amp;
-                        Tecnologías
-                    </h3>
-                    <div class="skill-bars">
-                        <div class="skill-bar-item" data-level="90">
-                            <div class="skill-bar-top">
-                                <span>VB.Net / VB6</span><span class="skill-pct">90%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar-item" data-level="80">
-                            <div class="skill-bar-top">
-                                <span>SQL Server</span><span class="skill-pct">80%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar-item" data-level="80">
-                            <div class="skill-bar-top">
-                                <span>WordPress / Elementor</span><span class="skill-pct">80%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar-item" data-level="75">
-                            <div class="skill-bar-top">
-                                <span>C# / .NET</span><span class="skill-pct">75%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar-item" data-level="70">
-                            <div class="skill-bar-top">
-                                <span>JavaScript</span><span class="skill-pct">70%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar-item" data-level="75">
-                            <div class="skill-bar-top">
-                                <span>HTML / CSS</span><span class="skill-pct">75%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar-item" data-level="70">
-                            <div class="skill-bar-top">
-                                <span>PHP / MySQL</span><span class="skill-pct">70%</span>
-                            </div>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill"></div>
-                            </div>
-                        </div>
+        <!-- ═══════════════ HABILIDADES ═══════════════ -->
+        <section class="section alt" id="habilidades">
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="num">03</span>
+                    <h2>Habilidades</h2>
+                </div>
+
+                <div class="skills">
+                    <div class="skill-col reveal">
+                        <h3>Desarrollo</h3>
+                        <ul>
+                            <li>VB.Net / VB6</li>
+                            <li>C# / .NET</li>
+                            <li>SQL Server</li>
+                            <li>JavaScript</li>
+                            <li>PHP / MySQL</li>
+                            <li>HTML / CSS</li>
+                            <li>Android con Java</li>
+                        </ul>
+                    </div>
+                    <div class="skill-col reveal">
+                        <h3>Sitios web</h3>
+                        <ul>
+                            <li>WordPress</li>
+                            <li>Elementor</li>
+                            <li>WooCommerce</li>
+                            <li>SportsPress</li>
+                            <li>Smart Slider 3</li>
+                            <li>Temas hijo</li>
+                        </ul>
+                    </div>
+                    <div class="skill-col reveal">
+                        <h3>Redes e infraestructura</h3>
+                        <ul>
+                            <li>Cableado estructurado</li>
+                            <li>Servidores Windows</li>
+                            <li>Linux básico</li>
+                            <li>CCNA Módulo I</li>
+                            <li>Office 365</li>
+                        </ul>
+                    </div>
+                    <div class="skill-col reveal">
+                        <h3>Herramientas</h3>
+                        <ul>
+                            <li>Git / GitHub</li>
+                            <li>Visual Studio</li>
+                            <li>Android Studio</li>
+                            <li>Crystal Reports</li>
+                            <li>Firestore</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="skills-right">
-                    <div class="skills-group">
-                        <h3 class="skills-group-title">
-                            <span class="skills-group-icon">🌐</span> Redes &amp;
-                            Infraestructura
-                        </h3>
-                        <div class="skill-tags">
-                            <span class="stag">Cableado estructurado</span>
-                            <span class="stag">Servidores Windows</span>
-                            <span class="stag">Linux básico</span>
-                            <span class="stag">CCNA Módulo I</span>
-                            <span class="stag">Office 365</span>
-                        </div>
+                <div class="how">
+                    <h3 class="how-title eyebrow">Cómo trabajo</h3>
+                    <div class="how-item reveal"><span class="n">01</span>
+                        <p>Liderazgo de equipos de desarrollo</p>
                     </div>
-
-                    <div class="skills-group">
-                        <h3 class="skills-group-title">
-                            <span class="skills-group-icon">🛠️</span> Herramientas
-                        </h3>
-                        <div class="skill-tags">
-                            <span class="stag">Git / GitHub</span>
-                            <span class="stag">Visual Studio</span>
-                            <span class="stag">Android Studio</span>
-                            <span class="stag">Crystal Reports</span>
-                            <span class="stag">WordPress</span>
-                            <span class="stag">Elementor</span>
-                            <span class="stag">SportsPress</span>
-                            <span class="stag">Smart Slider 3</span>
-                            <span class="stag">Child Themes</span>
-                            <span class="stag">SQL</span>
-                            <span class="stag">Firestore</span>
-                        </div>
+                    <div class="how-item reveal"><span class="n">02</span>
+                        <p>Capacitación e inducción de personal</p>
                     </div>
-
-                    <div class="skills-group">
-                        <h3 class="skills-group-title">
-                            <span class="skills-group-icon">🤝</span> Habilidades blandas
-                        </h3>
-                        <div class="soft-skills">
-                            <div class="soft-item">
-                                <span class="soft-dot"></span>
-                                Liderazgo de equipos de desarrollo
-                            </div>
-                            <div class="soft-item">
-                                <span class="soft-dot"></span>
-                                Capacitación e inducción de personal
-                            </div>
-                            <div class="soft-item">
-                                <span class="soft-dot"></span>
-                                Comunicación efectiva
-                            </div>
-                            <div class="soft-item">
-                                <span class="soft-dot"></span>
-                                Análisis y solución de problemas
-                            </div>
-                        </div>
+                    <div class="how-item reveal"><span class="n">03</span>
+                        <p>Comunicación efectiva</p>
+                    </div>
+                    <div class="how-item reveal"><span class="n">04</span>
+                        <p>Análisis y solución de problemas</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ═══════════════ SECCIÓN 4 — PROYECTOS ═══════════════ -->
-    <section class="section" id="proyectos">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">03</span>
-                <h2 class="section-title">Proyectos</h2>
-                <div class="section-line"></div>
-            </div>
+        <!-- ═══════════════ CONTACTO ═══════════════ -->
+        <section class="contact" id="contacto">
+            <div class="wrap contact-grid">
+                <div>
+                    <p class="eyebrow">04 — Contacto</p>
+                    <h2>¿Tienes un proyecto? <span class="hl">Hablemos.</span></h2>
+                    <p class="intro">Cuéntame qué necesitas, sea un sitio web, un sistema o una conversación sobre una
+                        oportunidad. Te respondo pronto.</p>
 
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <div class="project-card-top">
-                        <span class="project-icon">🏢</span>
-                        <div class="project-badges">
-                            <span class="pbadge">Liderazgo</span>
-                            <span class="pbadge">Capacitación</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Liderazgo Departamento de Software</h3>
-                    <span class="project-company">NCQ (6 años)</span>
-                    <p class="project-desc">
-                        Liderazgo del equipo de mantenimiento de software, desarrollo de software e inducción de nuevos desarrolladores dentro de la
-                        organización.
-                    </p>
-                    <div class="project-meta">
-                        <span class="pmeta-item active">🟢 Actual</span>
+                    <div class="c-list">
+                        <a href="tel:85646198" class="c-row"><span>Teléfono</span><span>8564-6198</span></a>
+                        <a href="mailto:fernando.quesadam@gmail.com" class="c-row"><span>Correo</span><span>fernando.quesadam@gmail.com</span></a>
+                        <div class="c-row"><span>Ubicación</span><span>Pérez Zeledón, San José, Costa Rica</span></div>
                     </div>
                 </div>
 
-                <div class="project-card featured">
-                    <div class="project-card-top">
-                        <span class="project-icon">🥋</span>
-                        <div class="project-badges">
-                            <span class="pbadge">WordPress</span>
-                            <span class="pbadge">Rediseño</span>
-                            <span class="pbadge">Optimización</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">MASTKD</h3>
-                    <span class="project-company">Cliente · Academia de Taekwondo</span>
-                    <p class="project-desc">
-                        Reactivación y rediseño completo de sitio web inactivo. Actualización de diseño, contenido, plugins y rendimiento general en WordPress.
-                    </p>
-                    <div class="project-actions">
-                        <a href="https://mastkd.com" target="_blank" class="project-btn primary">
-                            Ver sitio
-                        </a>
-                    </div>
-                    <div class="project-meta">
-                        <span class="pmeta-item">🟢 Activo</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-top">
-                        <span class="project-icon">🛍️</span>
-                        <div class="project-badges">
-                            <span class="pbadge">E-commerce</span>
-                            <span class="pbadge">PHP / MySQL</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Tienda CR</h3>
-                    <span class="project-company">Cliente · Tienda en línea</span>
-                    <p class="project-desc">
-                        Tienda en línea de productos para embarazo, lactancia y postparto, con catálogo por categorías, ofertas y checkout pensado para el mercado costarricense.
-                    </p>
-                    <div class="project-actions">
-                        <a href="https://tienda-cr.free.nf/?i=1" target="_blank" class="project-btn primary">
-                            Ver sitio
-                        </a>
-                    </div>
-                    <div class="project-meta">
-                        <span class="pmeta-item">🌐 Demo</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-top">
-                        <span class="project-icon">🏛️</span>
-                        <div class="project-badges">
-                            <span class="pbadge">HTML</span>
-                            <span class="pbadge">CSS</span>
-                            <span class="pbadge">JavaScript</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Plaza Laurel</h3>
-                    <span class="project-company">Cliente · Centro comercial boutique</span>
-                    <p class="project-desc">
-                        Sitio web para un centro comercial boutique en Escazú: directorio de locales, identidad visual elegante y secciones pensadas para transmitir exclusividad.
-                    </p>
-                    <div class="project-actions">
-                        <a href="https://dalicore.github.io/plazalaurel/" target="_blank" class="project-btn primary">
-                            Ver sitio
-                        </a>
-                    </div>
-                    <div class="project-meta">
-                        <span class="pmeta-item">🌐 Demo</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-top">
-                        <span class="project-icon">🎂</span>
-                        <div class="project-badges">
-                            <span class="pbadge">HTML</span>
-                            <span class="pbadge">CSS</span>
-                            <span class="pbadge">JavaScript</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">La Repostería</h3>
-                    <span class="project-company">Cliente · Repostería artesanal</span>
-                    <p class="project-desc">
-                        Sitio web para repostería artesanal con showcase de productos, galería de creaciones y pedidos directos por WhatsApp.
-                    </p>
-                    <div class="project-actions">
-                        <a href="https://dalicore.github.io/LaReposteria/" target="_blank" class="project-btn primary">
-                            Ver sitio
-                        </a>
-                    </div>
-                    <div class="project-meta">
-                        <span class="pmeta-item">🌐 Demo</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-top">
-                        <span class="project-icon">🏢</span>
-                        <div class="project-badges">
-                            <span class="pbadge">WordPress</span>
-                            <span class="pbadge">Elementor</span>
-                            <span class="pbadge">Diseño Web</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Nasua</h3>
-                    <span class="project-company">Cliente · Sitio corporativo</span>
-                    <p class="project-desc">
-                        Diseño y desarrollo de sitio corporativo en WordPress con Elementor. Estructura visual moderna, secciones orientadas a conversión y optimización de contenido.
-                    </p>
-                    <div class="project-actions">
-                        <a href="https://nasua-demo.22web.org/wp/" target="_blank" class="project-btn primary">
-                            Ver sitio
-                        </a>
-                    </div>
-                    <div class="project-meta">
-                        <span class="pmeta-item">🌐 Demo</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-top">
-                        <span class="project-icon">🏀</span>
-                        <div class="project-badges">
-                            <span class="pbadge">WordPress</span>
-                            <span class="pbadge">Elementor</span>
-                            <span class="pbadge">SportsPress</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Hoopz Basketball Academy</h3>
-                    <span class="project-company">Cliente · Academia de baloncesto</span>
-                    <p class="project-desc">
-                        Sitio web para academia de baloncesto juvenil con categorías U10 a U16. Tema hijo personalizado, gestión de equipos y resultados con SportsPress, y hero animado con Smart Slider 3.
-                    </p>
-                    <div class="project-actions">
-                        <a href="https://hoopz-demo.web1337.net/wp/" target="_blank" class="project-btn primary">
-                            Ver sitio
-                        </a>
-                    </div>
-                    <div class="project-meta">
-                        <span class="pmeta-item">🌐 Demo</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-top">
-                        <span class="project-icon">🍽️</span>
-                        <div class="project-badges">
-                            <span class="pbadge">HTML</span>
-                            <span class="pbadge">JavaScript</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Guía Pérez Zeledón</h3>
-                    <span class="project-company">Personal</span>
-                    <p class="project-desc">
-                        Plataforma web informativa enfocada en comercios, servicios y lugares de Pérez Zeledón..
-                    </p>
-                    <div class="project-actions">
-                        <a href="https://fernandoqm.github.io/guia_pz/" target="_blank" class="project-btn primary">
-                            Ver sitio
-                        </a>
-                    </div>
-                    <!-- SLIDER -->
-                    <div class="project-preview-slider">
-
-                        <img src="assets/img/guia_01.png" class="project-slide active" alt="Guía Pérez Zeledón 1"
-                            onclick="openLightbox(this.src, 'Guía Pérez Zeledón')" />
-
-                        <img src="assets/img/guia_02.png" class="project-slide" alt="Guía Pérez Zeledón 2"
-                            onclick="openLightbox(this.src, 'Guía Pérez Zeledón')" />
-
-                        <img src="assets/img/guia_03.png" class="project-slide" alt="Guía Pérez Zeledón 3"
-                            onclick="openLightbox(this.src, 'Guía Pérez Zeledón')" />
-
-                        <img src="assets/img/guia_04.png" class="project-slide" alt="Guía Pérez Zeledón 4"
-                            onclick="openLightbox(this.src, 'Guía Pérez Zeledón')" />
-
-                        <div class="preview-overlay">
-                            🔍 Ver imagen
-                        </div>
-
-                        <button class="slide-btn prev">‹</button>
-                        <button class="slide-btn next">›</button>
-
-                    </div>
-                    <div class="project-meta">
-                        <span class="pmeta-item">🚧 En desarrollo</span>
-                    </div>
-                </div>
-
-                <div class="project-card featured">
-
-                    <div class="project-card-top">
-
-                        <span class="project-icon">💱</span>
-
-                        <div class="project-badges">
-                            <span class="pbadge">Android</span>
-                        </div>
-
-                    </div>
-
-                    <h3 class="project-title">
-                        Conversor de Monedas
-                    </h3>
-
-                    <span class="project-company">
-                        Personal
-                    </span>
-
-                    <p class="project-desc">
-                        Aplicación móvil enfocada en viajeros para convertir
-                        monedas en tiempo real.
-                    </p>
-
-                    <!-- SLIDER -->
-                    <div class="project-preview-slider">
-
-                        <img src="assets/img/convert01.png" class="project-slide active" alt="Conversor 1"
-                            onclick="openLightbox(this.src, 'Conversor de Monedas')" />
-
-                        <img src="assets/img/convert02.png" class="project-slide" alt="Conversor 2"
-                            onclick="openLightbox(this.src, 'Conversor de Monedas')" />
-
-                        <img src="assets/img/convert03.png" class="project-slide" alt="Conversor 3"
-                            onclick="openLightbox(this.src, 'Conversor de Monedas')" />
-
-                        <div class="preview-overlay">
-                            🔍 Ver imagen
-                        </div>
-
-                        <button class="slide-btn prev">‹</button>
-                        <button class="slide-btn next">›</button>
-
-                    </div>
-
-                    <div class="project-meta">
-                        <span class="pmeta-item">⚡ Disponible</span>
-                    </div>
-
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-top">
-                        <span class="project-icon">🏆</span>
-                        <div class="project-badges">
-                            <span class="pbadge">Android</span>
-                            <span class="pbadge">Firebase</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">SportAcademy</h3>
-                    <span class="project-company">Personal</span>
-                    <p class="project-desc">
-                        Aplicación movil para el control de los alumnos, registro de pagos y proyectos de la academía.
-                    </p>
-                    <!-- SLIDER -->
-                    <div class="project-preview-slider">
-
-                        <img src="assets/img/sportacademy01.png" class="project-slide active" alt="SportAcademy"
-                            onclick="openLightbox(this.src, 'SportAcademy')" />
-
-                        <img src="assets/img/sportacademy02.png" class="project-slide" alt="SportAcademy"
-                            onclick="openLightbox(this.src, 'SportAcademy')" />
-
-                        <img src="assets/img/sportacademy03.png" class="project-slide" alt="SportAcademy"
-                            onclick="openLightbox(this.src, 'SportAcademy')" />
-
-                        <img src="assets/img/sportacademy04.png" class="project-slide" alt="SportAcademy"
-                            onclick="openLightbox(this.src, 'SportAcademy')" />
-
-                        <img src="assets/img/sportacademy05.png" class="project-slide" alt="SportAcademy"
-                            onclick="openLightbox(this.src, 'SportAcademy')" />
-
-                        <div class="preview-overlay">
-                            🔍 Ver imagen
-                        </div>
-
-                        <button class="slide-btn prev">‹</button>
-                        <button class="slide-btn next">›</button>
-
-                    </div>
-                    <div class="project-meta">
-                        <span class="pmeta-item">⚡ Disponible</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-top">
-                        <span class="project-icon">🅿️</span>
-                        <div class="project-badges">
-                            <span class="pbadge">Next.js</span>
-                            <span class="pbadge">Supabase</span>
-                            <span class="pbadge">Vercel</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">ParqueoHub</h3>
-                    <span class="project-company">Personal</span>
-                    <p class="project-desc">
-                        Aplicación web para el control de parqueos, registro de vehículos y usuarios.
-                    </p>
-                    <div class="project-actions">
-                        <a href="https://parqueo-no4p.vercel.app/dashboard" target="_blank" class="project-btn primary">
-                            Ver sistema
-                        </a>
-                    </div>
-                    <!-- SLIDER -->
-                    <div class="project-preview-slider">
-
-                        <img src="assets/img/parqueo_01.png" class="project-slide active" alt="ParqueoHub"
-                            onclick="openLightbox(this.src, 'ParqueoHub')" />
-
-                        <img src="assets/img/parqueo_02.png" class="project-slide" alt="ParqueoHub"
-                            onclick="openLightbox(this.src, 'ParqueoHub')" />
-
-                        <img src="assets/img/parqueo_03.png" class="project-slide" alt="ParqueoHub"
-                            onclick="openLightbox(this.src, 'ParqueoHub')" />
-
-                        <img src="assets/img/parqueo_04.png" class="project-slide" alt="ParqueoHub"
-                            onclick="openLightbox(this.src, 'ParqueoHub')" />
-
-                        <img src="assets/img/parqueo_05.png" class="project-slide" alt="ParqueoHub"
-                            onclick="openLightbox(this.src, 'ParqueoHub')" />
-
-                        <div class="preview-overlay">
-                            🔍 Ver imagen
-                        </div>
-
-                        <button class="slide-btn prev">‹</button>
-                        <button class="slide-btn next">›</button>
-
-                    </div>
-                    <div class="project-meta">
-                        <span class="pmeta-item">⚡ Disponible</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-top">
-                        <span class="project-icon">🌐</span>
-                        <div class="project-badges">
-                            <span class="pbadge">Next.js</span>
-                            <span class="pbadge">Supabase</span>
-                            <span class="pbadge">Vercel</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Zenty</h3>
-                    <span class="project-company">Personal</span>
-                    <p class="project-desc">
-                        Aplicación web el control y agenda de citas para la atención a clientes.
-                    </p>
-                    <div class="project-actions">
-                        <a href="https://zenty-rust.vercel.app/dashboard" target="_blank" class="project-btn primary">
-                            Ver sistema
-                        </a>
-                    </div>
-                    <!-- SLIDER -->
-                    <div class="project-preview-slider">
-
-                        <img src="assets/img/zenty_01.png" class="project-slide active" alt="Zenty 1"
-                            onclick="openLightbox(this.src, 'Zenty')" />
-
-                        <img src="assets/img/zenty_02.png" class="project-slide" alt="Zenty 2"
-                            onclick="openLightbox(this.src, 'Zenty')" />
-
-                        <img src="assets/img/zenty_03.png" class="project-slide" alt="Zenty 3"
-                            onclick="openLightbox(this.src, 'Zenty')" />
-
-                        <img src="assets/img/zenty_04.png" class="project-slide" alt="Zenty 3"
-                            onclick="openLightbox(this.src, 'Zenty')" />
-
-                        <div class="preview-overlay">
-                            🔍 Ver imagen
-                        </div>
-
-                        <button class="slide-btn prev">‹</button>
-                        <button class="slide-btn next">›</button>
-
-                    </div>
-                    <div class="project-meta">
-                        <span class="pmeta-item">🚧 En desarrollo</span>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ═══════════════ SECCIÓN 5 — CONTACTO  ═══════════════ -->
-    <section class="section section-alt" id="contacto">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-number">04</span>
-                <h2 class="section-title">Contacto</h2>
-                <div class="section-line"></div>
-            </div>
-
-            <div class="contact-layout">
-                <div class="contact-info">
-                    <p class="contact-intro">
-                        ¿Tienes un proyecto en mente o quieres conversar sobre
-                        oportunidades? Estoy disponible para escucharte.
-                    </p>
-                    <div class="contact-cards">
-                        <a href="tel:85649198" class="contact-card">
-                            <span class="contact-card-icon">📞</span>
-                            <div>
-                                <span class="contact-card-label">Teléfono</span>
-                                <span class="contact-card-value">8564-9198</span>
-                            </div>
-                        </a>
-                        <a href="mailto:fernando.quesadam@gmail.com" class="contact-card">
-                            <span class="contact-card-icon">✉️</span>
-                            <div>
-                                <span class="contact-card-label">Email</span>
-                                <span class="contact-card-value">fernando.quesadam@gmail.com</span>
-                            </div>
-                        </a>
-                        <div class="contact-card">
-                            <span class="contact-card-icon">📍</span>
-                            <div>
-                                <span class="contact-card-label">Ubicación</span>
-                                <span class="contact-card-value">Pérez Zeledón, San José, CR</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="contactForm" novalidate>
-                    <div class="form-group">
+                <form class="form" id="contactForm" novalidate>
+                    <div class="field">
                         <label for="name">Nombre</label>
-                        <input type="text" id="name" placeholder="Tu nombre completo" required />
+                        <input type="text" id="name" autocomplete="name" placeholder="Tu nombre completo" required />
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required />
+                    <div class="field">
+                        <label for="email">Correo</label>
+                        <input type="email" id="email" autocomplete="email" placeholder="tucorreo@ejemplo.com"
+                            required />
                     </div>
-                    <div class="form-group">
+                    <div class="field">
                         <label for="subject">Asunto</label>
                         <input type="text" id="subject" placeholder="¿En qué puedo ayudarte?" />
                     </div>
-                    <div class="form-group">
+                    <div class="field">
                         <label for="message">Mensaje</label>
-                        <textarea id="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        <textarea id="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">
-                        <span>Enviar mensaje</span>
-                        <span class="btn-arrow">→</span>
-                    </button>
-                    <p class="form-note" id="formNote"></p>
+                    <button type="submit" class="btn"><span>Enviar mensaje</span><span class="arr">→</span></button>
+                    <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
                 </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- ── FOOTER ── -->
     <footer class="footer">
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                <span class="brand-bracket">&lt;</span>FQM<span class="brand-bracket">/&gt;</span>
-            </div>
-            <p class="footer-copy">
-                © 2026 Fernando Quesada Mora · Pérez Zeledón, Costa Rica
-            </p>
+        <div class="wrap footer-inner">
+            <span>© 2026 Fernando Quesada Mora</span>
+            <span>Pérez Zeledón, Costa Rica</span>
         </div>
     </footer>
 
     <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-        <div class="lightbox-content" onclick="event.stopPropagation()">
-            <img id="lightboxImg" src="" alt="" />
-            <p id="lightboxCaption"></p>
-        </div>
+    <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería de imágenes">
+        <button class="lb-btn lb-close" id="lbClose" aria-label="Cerrar">✕</button>
+        <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+        <figure class="lb-fig">
+            <img id="lbImg" src="" alt="" />
+            <figcaption class="lb-cap" id="lbCap"></figcaption>
+        </figure>
+        <button class="lb-btn lb-next" id="lbNext" aria-label="Siguiente">›</button>
     </div>
 
     <script src="assets/js/main.js"></script>
