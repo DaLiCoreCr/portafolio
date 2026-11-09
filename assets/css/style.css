@@ -148,6 +148,8 @@ section { position: relative; }
 
 /* ── SOBRE MÍ ──────────────────────────────────────── */
 .about { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 20px 48px; }
+.about-body { grid-column: 2; min-width: 0; }
+.about .portrait { grid-column: 1; }
 .about-body > * + * { margin-top: 20px; }
 .about .portrait { display: none; margin-bottom: 8px; }
 .about .portrait.show { display: block; }
@@ -283,6 +285,7 @@ a.c-row:hover span:last-child { color: #9aaaff; }
 @media (max-width: 960px) {
   .sec-head, .about { grid-template-columns: 1fr; gap: 10px; }
   .sec-head p { grid-column: 1; }
+  .about-body { grid-column: 1; }
   .project.wide { grid-template-columns: 1fr; }
   .project.wide .p-meta { margin-top: 20px; }
   .skills, .how { grid-template-columns: repeat(2, minmax(0, 1fr)); }
